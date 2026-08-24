@@ -1,4 +1,4 @@
-<!-- Deployment Neustart 17.08.2026 --> 
+<!-- Deployment Neustart 24.08.2026 -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -417,6 +417,11 @@
     .seminar-category {
       margin-bottom: 70px;
       scroll-margin-top: 20px;
+      padding: 34px 36px 38px;
+      border-radius: 28px;
+      background: white;
+      box-shadow: 0 10px 30px rgba(37,85,78,0.05);
+      border-top: 7px solid var(--green);
     }
 
     .seminar-category:last-child {
@@ -426,7 +431,7 @@
     .seminar-category h3 {
       color: var(--green);
       font-size: 2.3rem;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
     .seminar-list {
@@ -442,11 +447,189 @@
       border-left: 5px solid var(--green);
       font-weight: 700;
       color: var(--green-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
 
     .seminar-item.gold { border-left-color: var(--gold); }
     .seminar-item.terra { border-left-color: var(--terracotta); }
     .seminar-item.blue { border-left-color: var(--bluegrey); }
+
+    #paedagogik {
+      border-top-color: var(--gold);
+      background: linear-gradient(180deg, rgba(184,135,43,0.08), #ffffff 130px);
+    }
+
+    #gesundheitswesen {
+      border-top-color: var(--terracotta);
+      background: linear-gradient(180deg, rgba(182,107,85,0.08), #ffffff 130px);
+    }
+
+    #resilienz {
+      border-top-color: var(--bluegrey);
+      background: linear-gradient(180deg, rgba(96,115,135,0.08), #ffffff 130px);
+    }
+
+    #inklusion {
+      background: linear-gradient(180deg, rgba(37,85,78,0.08), #ffffff 130px);
+    }
+
+    .seminar-category .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      background: rgba(37,85,78,0.10);
+      color: var(--green);
+    }
+
+    #paedagogik .section-kicker {
+      background: rgba(184,135,43,0.12);
+      color: #8B651F;
+    }
+
+    #gesundheitswesen .section-kicker {
+      background: rgba(182,107,85,0.12);
+      color: #92523F;
+    }
+
+    #resilienz .section-kicker {
+      background: rgba(96,115,135,0.13);
+      color: #4E6074;
+    }
+
+    .area-request-button {
+      margin-top: 24px;
+      width: fit-content;
+    }
+
+    /* SEMINAR-EINBLICK / ARBEITSPROBE */
+
+    .seminar-preview-section {
+      background: white;
+      overflow: hidden;
+      scroll-margin-top: 20px;
+    }
+
+    .seminar-preview-heading {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 46px;
+    }
+
+    .seminar-preview-heading .section-intro {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .seminar-slider {
+      position: relative;
+      max-width: 1050px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr) 58px;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .slider-frame {
+      background: var(--cream);
+      border-radius: 24px;
+      padding: 12px;
+      box-shadow: 0 18px 45px rgba(37,85,78,0.10);
+      border: 1px solid rgba(37,85,78,0.08);
+    }
+
+    .slider-frame img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      border-radius: 14px;
+      background: var(--cream);
+    }
+
+    .slider-arrow {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 2px solid var(--green);
+      background: var(--cream);
+      color: var(--green);
+      font-family: "League Spartan", sans-serif;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .slider-arrow:hover {
+      background: var(--green);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .slider-arrow:focus-visible {
+      outline: 3px solid var(--red);
+      outline-offset: 3px;
+    }
+
+    .slider-meta {
+      text-align: center;
+      margin-top: 18px;
+      color: var(--green);
+      font-family: "League Spartan", sans-serif;
+      font-weight: 700;
+    }
+
+    .slider-thumbnails {
+      max-width: 780px;
+      margin: 22px auto 0;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .slide-thumb {
+      border: 2px solid transparent;
+      background: transparent;
+      padding: 0;
+      border-radius: 12px;
+      cursor: pointer;
+      overflow: hidden;
+      opacity: 0.62;
+      transition: 0.2s ease;
+    }
+
+    .slide-thumb img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .slide-thumb:hover {
+      opacity: 1;
+    }
+
+    .slide-thumb.active {
+      border-color: var(--red);
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    .seminar-preview-action {
+      max-width: 760px;
+      margin: 38px auto 0;
+      text-align: center;
+    }
+
+    .seminar-preview-action p {
+      margin-bottom: 22px;
+      font-size: 0.98rem;
+    }
 
     /* ABOUT */
 
@@ -604,7 +787,6 @@
       margin-bottom: 8px;
     }
 
-
     /* DOWNLOADS */
 
     .downloads-section {
@@ -673,7 +855,6 @@
       padding: 15px 18px;
       text-align: center;
     }
-
 
     /* ANFRAGEFORMULAR */
 
@@ -786,34 +967,6 @@
       font-size: 0.95rem;
     }
 
-    .seminar-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .seminar-request-link {
-      flex: 0 0 auto;
-      border: 0;
-      background: transparent;
-      color: var(--red);
-      font-family: "League Spartan", sans-serif;
-      font-weight: 700;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .seminar-request-link:hover {
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .area-request-button {
-      margin-top: 24px;
-      width: fit-content;
-    }
-
     /* CONTACT */
 
     .contact-section {
@@ -865,66 +1018,6 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
-    }
-
-
-    /* SEMINARBEREICHE – stärkere visuelle Trennung */
-
-    .seminar-category {
-      padding: 34px 36px 38px;
-      border-radius: 28px;
-      background: white;
-      box-shadow: 0 10px 30px rgba(37,85,78,0.05);
-      border-top: 7px solid var(--green);
-    }
-
-    #paedagogik {
-      border-top-color: var(--gold);
-      background: linear-gradient(180deg, rgba(184,135,43,0.08), #ffffff 130px);
-    }
-
-    #gesundheitswesen {
-      border-top-color: var(--terracotta);
-      background: linear-gradient(180deg, rgba(182,107,85,0.08), #ffffff 130px);
-    }
-
-    #resilienz {
-      border-top-color: var(--bluegrey);
-      background: linear-gradient(180deg, rgba(96,115,135,0.08), #ffffff 130px);
-    }
-
-    #inklusion {
-      background: linear-gradient(180deg, rgba(37,85,78,0.08), #ffffff 130px);
-    }
-
-    .seminar-category .section-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      margin-bottom: 12px;
-      background: rgba(37,85,78,0.10);
-      color: var(--green);
-    }
-
-    #paedagogik .section-kicker {
-      background: rgba(184,135,43,0.12);
-      color: #8B651F;
-    }
-
-    #gesundheitswesen .section-kicker {
-      background: rgba(182,107,85,0.12);
-      color: #92523F;
-    }
-
-    #resilienz .section-kicker {
-      background: rgba(96,115,135,0.13);
-      color: #4E6074;
-    }
-
-    .seminar-category h3 {
-      margin-bottom: 24px;
     }
 
     /* RECHTLICHE HINWEISE */
@@ -979,7 +1072,7 @@
       text-underline-offset: 3px;
     }
 
-    /* NACH-OBEN-BUTTON */
+    /* VORLESEN + NACH OBEN */
 
     .read-aloud {
       position: fixed;
@@ -1043,82 +1136,80 @@
       transform: translateY(-2px);
     }
 
-    /* NAVIGATION – zusätzlicher Reiter Arbeitgeberbefragung */
+    /* NAVIGATION – mit Seminar-Einblick */
+
     @media (max-width: 1500px) and (min-width: 1181px) {
       .navbar {
-        gap: 18px;
+        gap: 14px;
       }
 
       .brand {
-        gap: 12px;
+        gap: 10px;
       }
 
       .brand img {
-        width: 125px;
-        height: 125px;
+        width: 118px;
+        height: 118px;
       }
 
       .brand-copy {
-        min-width: 175px;
+        min-width: 165px;
       }
 
       .brand-copy strong {
-        font-size: 1.08rem;
+        font-size: 1rem;
         line-height: 1.08;
       }
 
       .brand-copy span {
-        font-size: 0.64rem;
+        font-size: 0.61rem;
       }
 
       .nav-links {
-        gap: 12px;
-        font-size: 0.95rem;
+        gap: 9px;
+        font-size: 0.84rem;
       }
 
       .nav-cta {
-        min-width: 122px;
-        padding: 12px 17px;
+        min-width: 112px;
+        padding: 11px 14px;
       }
     }
 
-
-    /* RESPONSIVE HEADER */
-
     @media (max-width: 1180px) and (min-width: 1001px) {
       .navbar {
-        gap: 16px;
-      }
-
-      .brand {
         gap: 12px;
       }
 
+      .brand {
+        gap: 10px;
+      }
+
       .brand img {
-        width: 132px;
-        height: 132px;
+        width: 105px;
+        height: 105px;
       }
 
       .brand-copy {
-        min-width: 185px;
+        min-width: 150px;
       }
 
       .brand-copy strong {
-        font-size: 1.08rem;
+        font-size: 0.94rem;
       }
 
       .brand-copy span {
-        font-size: 0.66rem;
+        font-size: 0.56rem;
       }
 
       .nav-links {
-        gap: 14px;
-        font-size: 0.86rem;
+        gap: 7px;
+        font-size: 0.75rem;
       }
 
       .nav-cta {
-        min-width: 118px;
-        padding: 12px 16px;
+        min-width: 105px;
+        padding: 10px 12px;
       }
     }
 
@@ -1225,6 +1316,50 @@
         padding: 26px 20px 30px;
       }
 
+      .seminar-slider {
+        display: block;
+        position: relative;
+      }
+
+      .slider-frame {
+        padding: 7px;
+        border-radius: 18px;
+      }
+
+      .slider-prev,
+      .slider-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        width: 44px;
+        height: 44px;
+        font-size: 1.6rem;
+        background: rgba(248,246,242,0.94);
+      }
+
+      .slider-prev {
+        left: 10px;
+      }
+
+      .slider-next {
+        right: 10px;
+      }
+
+      .slider-prev:hover,
+      .slider-next:hover {
+        transform: translateY(-50%);
+      }
+
+      .slider-thumbnails {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 6px;
+      }
+
+      .seminar-preview-action {
+        margin-top: 30px;
+      }
+
       .read-aloud {
         right: 16px;
         bottom: 76px;
@@ -1258,926 +1393,1182 @@
 
 <body>
 
-  <header id="start">
+<header id="start">
+  <div class="top-green-shape"></div>
+  <div class="bottom-red-shape"></div>
 
-    <div class="top-green-shape"></div>
-    <div class="bottom-red-shape"></div>
+  <div class="container">
+    <nav class="navbar">
 
-    <div class="container">
+      <a class="brand" href="#start">
+        <img src="logo-conexus.png" alt="Conexus – Bildung & Inklusion Logo">
 
-      <nav class="navbar">
+        <div class="brand-copy">
+          <strong>Conexus – Bildung & Inklusion</strong>
+          <span>Verbindend <i>|</i> Inklusiv <i>|</i> Zukunftsorientiert</span>
+        </div>
+      </a>
 
-        <a class="brand" href="#start">
-          <img src="logo-conexus.png" alt="Conexus – Bildung & Inklusion Logo">
+      <ul class="nav-links">
+        <li><a href="#start">Start</a></li>
+        <li><a href="#seminare">Seminare</a></li>
+        <li><a href="#seminar-einblick">Seminar-Einblick</a></li>
+        <li><a href="#ueber-mich">Über mich</a></li>
+        <li><a href="#individuell">Individuelle Angebote</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#arbeitgeberbefragung">Arbeitgeberbefragung</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a class="nav-cta" href="#anfrage">Anfrage stellen</a></li>
+      </ul>
 
-          <div class="brand-copy">
-            <strong>Conexus – Bildung & Inklusion</strong>
-            <span>Verbindend <i>|</i> Inklusiv <i>|</i> Zukunftsorientiert</span>
-          </div>
-        </a>
+    </nav>
 
-        <ul class="nav-links">
-          <li><a href="#start">Start</a></li>
-          <li><a href="#seminare">Seminare</a></li>
-          <li><a href="#ueber-mich">Über mich</a></li>
-          <li><a href="#individuell">Individuelle Angebote</a></li>
-          <li><a href="#downloads">Downloads</a></li>
-          <li><a href="#arbeitgeberbefragung">Arbeitgeberbefragung</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-          <li><a class="nav-cta" href="#anfrage">Anfrage stellen</a></li>
-        </ul>
-
-      </nav>
-
-      <div class="hero">
-
-        <div>
-          <div class="hero-kicker">
-            Fachvorträge · Workshops · Seminare
-          </div>
-
-          <h1>
-            Bildung,<br>
-            die <span>verbindet.</span>
-          </h1>
-
-          <div class="scribble"></div>
-
-          <p class="hero-copy">
-            Praxisnahe Bildungsangebote für Unternehmen, Bildungsträger und
-            soziale Einrichtungen – fachlich fundiert, verständlich vermittelt
-            und mit einem klaren Blick auf Teilhabe und Praxis.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#seminare" class="button button-red">Seminare entdecken</a>
-            <a href="#kontakt" class="button button-outline">Kontakt aufnehmen</a>
-          </div>
+    <div class="hero">
+      <div>
+        <div class="hero-kicker">
+          Fachvorträge · Workshops · Seminare
         </div>
 
-        <div class="hero-photo-wrap">
-          <img
-            class="hero-photo"
-            src="niklas-portrait.jpg"
-            alt="Niklas Gorczynski"
+        <h1>
+          Bildung,<br>
+          die <span>verbindet.</span>
+        </h1>
+
+        <div class="scribble"></div>
+
+        <p class="hero-copy">
+          Praxisnahe Bildungsangebote für Unternehmen, Bildungsträger und
+          soziale Einrichtungen – fachlich fundiert, verständlich vermittelt
+          und mit einem klaren Blick auf Teilhabe und Praxis.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#seminare" class="button button-red">Seminare entdecken</a>
+          <a href="#kontakt" class="button button-outline">Kontakt aufnehmen</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <img
+          class="hero-photo"
+          src="niklas-portrait.jpg"
+          alt="Niklas Gorczynski"
+        >
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="seminar-section" id="seminare">
+  <div class="container">
+
+    <div class="seminar-heading">
+      <div class="section-kicker">Seminarportfolio</div>
+
+      <h2 class="section-title">
+        Vier Bildungsbereiche.<br>
+        Ein gemeinsamer Anspruch.
+      </h2>
+
+      <p class="section-intro">
+        Meine Fachvorträge, Workshops und Seminare verbinden fundiertes
+        Fachwissen mit konkreter Praxisrelevanz. Alle Angebote können
+        individuell an Zielgruppe, zeitlichen Rahmen und fachliche
+        Schwerpunkte angepasst werden.
+      </p>
+    </div>
+
+    <div class="area-grid">
+
+      <article class="area-card">
+        <div class="area-icon icon-green">01</div>
+        <div class="area-number">01 · 6 SEMINARE</div>
+
+        <h3>Inklusion & Teilhabe</h3>
+
+        <p>
+          Barrieren erkennen und abbauen, Teilhabe ermöglichen und inklusive
+          Zusammenarbeit nachhaltig gestalten.
+        </p>
+
+        <a href="#inklusion">Seminare ansehen →</a>
+      </article>
+
+      <article class="area-card">
+        <div class="area-icon icon-gold">02</div>
+        <div class="area-number">02 · 5 SEMINARE</div>
+
+        <h3>Pädagogik & Ausbildung</h3>
+
+        <p>
+          Pädagogische Kompetenzen stärken, Lernprozesse professionell
+          gestalten und Ausbildung praxisnah begleiten.
+        </p>
+
+        <a href="#paedagogik">Seminare ansehen →</a>
+      </article>
+
+      <article class="area-card">
+        <div class="area-icon icon-terra">03</div>
+        <div class="area-number">03 · 3 SEMINARE</div>
+
+        <h3>Gesundheits- & Sozialwesen</h3>
+
+        <p>
+          Verständliches Fachwissen zu Strukturen, Rechnungswesen und
+          Qualitätsmanagement im Gesundheits- und Sozialwesen.
+        </p>
+
+        <a href="#gesundheitswesen">Seminare ansehen →</a>
+      </article>
+
+      <article class="area-card">
+        <div class="area-icon icon-blue">04</div>
+        <div class="area-number">04 · 3 SEMINARE</div>
+
+        <h3>Gesundheit & Resilienz</h3>
+
+        <p>
+          Psychische Gesundheit stärken, Ressourcen fördern und einen
+          gesunden Arbeitsalltag gemeinsam gestalten.
+        </p>
+
+        <a href="#resilienz">Seminare ansehen →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="seminar-detail-section">
+  <div class="container">
+
+    <div class="seminar-category" id="inklusion">
+      <div class="section-kicker">01 · Inklusion & Teilhabe</div>
+      <h3>Seminarangebote</h3>
+
+      <div class="seminar-list">
+        <div class="seminar-item">Neurodiversität verstehen und Potenziale fördern</div>
+        <div class="seminar-item">Körperliche Behinderungen im Berufs- und Bildungsalltag</div>
+        <div class="seminar-item">Ableismus erkennen und reflektieren</div>
+        <div class="seminar-item">Selbstbestimmung und Empowerment bei Behinderung</div>
+        <div class="seminar-item">Rechtliche Grundlagen der Inklusion und Teilhabe</div>
+        <div class="seminar-item">Inklusive Organisationsentwicklung</div>
+      </div>
+
+      <a class="button button-red area-request-button" href="#anfrage">
+        Seminar anfragen
+      </a>
+    </div>
+
+    <div class="seminar-category" id="paedagogik">
+      <div class="section-kicker">02 · Pädagogik & Ausbildung</div>
+      <h3>Seminarangebote</h3>
+
+      <div class="seminar-list">
+        <div class="seminar-item gold">Vorbereitung auf die Ausbildereignungsprüfung (AEVO)</div>
+        <div class="seminar-item gold">Inklusive Freizeitpädagogik – Bewegung & Kreativität</div>
+        <div class="seminar-item gold">Pädagogische Konzepte und Ansätze im Überblick</div>
+        <div class="seminar-item gold">Rechtliche Grundlagen in pädagogischen Arbeitsfeldern</div>
+        <div class="seminar-item gold">Entwicklungspsychologie in der pädagogischen Praxis</div>
+      </div>
+
+      <a class="button button-red area-request-button" href="#anfrage">
+        Seminar anfragen
+      </a>
+    </div>
+
+    <div class="seminar-category" id="gesundheitswesen">
+      <div class="section-kicker">03 · Gesundheits- & Sozialwesen</div>
+      <h3>Seminarangebote</h3>
+
+      <div class="seminar-list">
+        <div class="seminar-item terra">Aufbau & Organisation des Gesundheits- und Sozialwesens</div>
+        <div class="seminar-item terra">Rechnungswesen im Gesundheits- und Sozialwesen</div>
+        <div class="seminar-item terra">Qualitätsmanagement im Gesundheits- und Sozialwesen</div>
+      </div>
+
+      <a class="button button-red area-request-button" href="#anfrage">
+        Seminar anfragen
+      </a>
+    </div>
+
+    <div class="seminar-category" id="resilienz">
+      <div class="section-kicker">04 · Gesundheit & Resilienz</div>
+      <h3>Seminarangebote</h3>
+
+      <div class="seminar-list">
+        <div class="seminar-item blue">Psychische Gesundheit als Arbeitnehmer:in</div>
+        <div class="seminar-item blue">Psychische Gesundheit als Arbeitgeber:in</div>
+        <div class="seminar-item blue">Psychische Gesundheit im Team</div>
+      </div>
+
+      <a class="button button-red area-request-button" href="#anfrage">
+        Seminar anfragen
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- NEU: SEMINAR-EINBLICK -->
+
+<section class="seminar-preview-section" id="seminar-einblick">
+  <div class="container">
+
+    <div class="seminar-preview-heading">
+      <div class="section-kicker">Arbeitsprobe · Sneak Peek</div>
+
+      <h2 class="section-title">
+        Einblick in meine Seminargestaltung.
+      </h2>
+
+      <p class="section-intro">
+        Wie sieht ein Seminar bei Conexus konkret aus?
+        Dieser kurze Einblick aus dem Seminar
+        „Körperliche Behinderungen im Berufs- und Bildungsalltag“
+        zeigt beispielhaft, wie fachlicher Input, Modelle,
+        Praxisbezug und Reflexion miteinander verbunden werden.
+      </p>
+    </div>
+
+    <div class="seminar-slider">
+
+      <button
+        class="slider-arrow slider-prev"
+        type="button"
+        aria-label="Vorherige Folie"
+      >
+        ‹
+      </button>
+
+      <div class="slider-frame">
+        <img
+          id="seminarSlide"
+          src="seminar-einblick-01.jpg"
+          alt="Seminar-Einblick Folie 1 von 5"
+        >
+      </div>
+
+      <button
+        class="slider-arrow slider-next"
+        type="button"
+        aria-label="Nächste Folie"
+      >
+        ›
+      </button>
+
+    </div>
+
+    <div class="slider-meta">
+      <span id="slideCounter">1 / 5</span>
+    </div>
+
+    <div class="slider-thumbnails">
+
+      <button class="slide-thumb active" type="button" data-slide="0" aria-label="Folie 1 anzeigen">
+        <img src="seminar-einblick-01.jpg" alt="Vorschau Folie 1">
+      </button>
+
+      <button class="slide-thumb" type="button" data-slide="1" aria-label="Folie 2 anzeigen">
+        <img src="seminar-einblick-02.jpg" alt="Vorschau Folie 2">
+      </button>
+
+      <button class="slide-thumb" type="button" data-slide="2" aria-label="Folie 3 anzeigen">
+        <img src="seminar-einblick-03.jpg" alt="Vorschau Folie 3">
+      </button>
+
+      <button class="slide-thumb" type="button" data-slide="3" aria-label="Folie 4 anzeigen">
+        <img src="seminar-einblick-04.jpg" alt="Vorschau Folie 4">
+      </button>
+
+      <button class="slide-thumb" type="button" data-slide="4" aria-label="Folie 5 anzeigen">
+        <img src="seminar-einblick-05.jpg" alt="Vorschau Folie 5">
+      </button>
+
+    </div>
+
+    <div class="seminar-preview-action">
+      <p>
+        Dieser Sneak Peek zeigt einen ausgewählten Ausschnitt der
+        Seminargestaltung. Inhalte, Methoden und Praxisfälle werden
+        an Zielgruppe, Auftrag und zeitlichen Rahmen angepasst.
+      </p>
+
+      <a
+        href="#anfrage"
+        class="button button-red"
+        id="previewRequestButton"
+      >
+        Seminar unverbindlich anfragen
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="about-section" id="ueber-mich">
+  <div class="container about-grid">
+
+    <div class="about-copy">
+      <div class="section-kicker">Über mich</div>
+
+      <h2 class="section-title">
+        Fachwissen trifft Praxis.
+      </h2>
+
+      <p>
+        Ich bin Niklas Gorczynski, Fachdozent, Bildungsreferent und
+        AEVO-Ausbilder.
+      </p>
+
+      <p>
+        Als Fachdozent und Bildungsreferent vermittle ich praxisnahes
+        Fachwissen in den Bereichen Gesundheits- und Sozialwesen,
+        Pädagogik, Erwachsenenbildung sowie Inklusion.
+      </p>
+
+      <p>
+        Durch meine Erfahrungen in Lehre, Sozialberatung und dem
+        Gesundheitswesen verbinde ich fundierte Fachkenntnisse mit
+        praxisorientierten Methoden.
+      </p>
+
+      <p>
+        Persönliche Erfahrungen mit Behinderung und Teilhabe ergänzen
+        meine fachliche Perspektive und prägen mein Verständnis von
+        inklusiver Bildung.
+      </p>
+
+      <a href="#kontakt" class="button button-red">
+        Kontakt aufnehmen
+      </a>
+    </div>
+
+    <aside class="qualification-card">
+      <h3>Qualifikationen</h3>
+
+      <ul>
+        <li>Fachwirt im Gesundheits- und Sozialwesen (IHK)</li>
+        <li>Bachelor Professional in Health and Social Services</li>
+        <li>Staatlich anerkannter Erzieher</li>
+        <li>Ausbildereignung nach AEVO</li>
+        <li>Praxis in Erwachsenenbildung, Sozial- und Gesundheitswesen</li>
+      </ul>
+    </aside>
+
+  </div>
+</section>
+
+
+<section class="why-section">
+  <div class="container">
+
+    <div class="why-heading">
+      <div class="section-kicker">Warum mit mir arbeiten?</div>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-item">
+        <div class="why-symbol">01</div>
+        <h4>Praxisnah & verständlich</h4>
+        <p>Komplexe Inhalte klar erklärt und direkt anwendbar.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-symbol">02</div>
+        <h4>Individuell & flexibel</h4>
+        <p>Anpassung an Zielgruppe, Themen und Rahmenbedingungen.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-symbol">03</div>
+        <h4>Erfahren & qualifiziert</h4>
+        <p>Verbindung aus Fachwissen, beruflicher Praxis und Didaktik.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-symbol">04</div>
+        <h4>Nachhaltig & wirksam</h4>
+        <p>Wissen, das im Berufs- und Bildungsalltag weiterwirkt.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="custom-section" id="individuell">
+  <div class="container">
+
+    <div class="custom-box">
+      <div class="custom-icon">+</div>
+
+      <div>
+        <h3>Nicht das richtige Seminar gefunden?</h3>
+
+        <p>
+          Gerne entwickle ich individuelle Fachvorträge, Workshops oder
+          Seminare – passgenau auf die Anforderungen Ihrer Einrichtung,
+          Ihres Unternehmens oder Ihrer Zielgruppe abgestimmt.
+        </p>
+      </div>
+
+      <a href="#kontakt" class="button button-red">
+        Bildungsangebot anfragen
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="request-section" id="anfrage">
+  <div class="container">
+
+    <div class="request-heading">
+      <div class="section-kicker">Unverbindliche Anfrage</div>
+
+      <h2 class="section-title">
+        Welches Bildungsangebot passt zu Ihnen?
+      </h2>
+
+      <p class="section-intro">
+        Wählen Sie ein Seminar aus und senden Sie mir die wichtigsten
+        Eckdaten. Ich melde mich anschließend persönlich bei Ihnen zurück.
+      </p>
+    </div>
+
+    <form
+      class="request-form"
+      id="seminarRequestForm"
+      action="https://api.web3forms.com/submit"
+      method="POST"
+    >
+
+      <input
+        type="hidden"
+        name="access_key"
+        value="9d895ef4-50ab-48f7-a302-5f071be66f15"
+      >
+
+      <input
+        type="hidden"
+        name="subject"
+        value="Neue Seminaranfrage über die Conexus-Website"
+      >
+
+      <input type="checkbox" name="botcheck" style="display:none;">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="request-name">Name / Ansprechpartner:in *</label>
+          <input
+            id="request-name"
+            type="text"
+            name="name"
+            autocomplete="name"
+            required
           >
         </div>
 
-      </div>
-
-    </div>
-  </header>
-
-
-  <section class="seminar-section" id="seminare">
-
-    <div class="container">
-
-      <div class="seminar-heading">
-        <div class="section-kicker">Seminarportfolio</div>
-
-        <h2 class="section-title">
-          Vier Bildungsbereiche.<br>
-          Ein gemeinsamer Anspruch.
-        </h2>
-
-        <p class="section-intro">
-          Meine Fachvorträge, Workshops und Seminare verbinden fundiertes
-          Fachwissen mit konkreter Praxisrelevanz. Alle Angebote können
-          individuell an Zielgruppe, zeitlichen Rahmen und fachliche
-          Schwerpunkte angepasst werden.
-        </p>
-      </div>
-
-
-      <div class="area-grid">
-
-        <article class="area-card">
-          <div class="area-icon icon-green">01</div>
-          <div class="area-number">01 · 6 SEMINARE</div>
-
-          <h3>Inklusion & Teilhabe</h3>
-
-          <p>
-            Barrieren erkennen und abbauen, Teilhabe ermöglichen und inklusive
-            Zusammenarbeit nachhaltig gestalten.
-          </p>
-
-          <a href="#inklusion">Seminare ansehen →</a>
-        </article>
-
-
-        <article class="area-card">
-          <div class="area-icon icon-gold">02</div>
-          <div class="area-number">02 · 5 SEMINARE</div>
-
-          <h3>Pädagogik & Ausbildung</h3>
-
-          <p>
-            Pädagogische Kompetenzen stärken, Lernprozesse professionell
-            gestalten und Ausbildung praxisnah begleiten.
-          </p>
-
-          <a href="#paedagogik">Seminare ansehen →</a>
-        </article>
-
-
-        <article class="area-card">
-          <div class="area-icon icon-terra">03</div>
-          <div class="area-number">03 · 3 SEMINARE</div>
-
-          <h3>Gesundheits- & Sozialwesen</h3>
-
-          <p>
-            Verständliches Fachwissen zu Strukturen, Rechnungswesen und
-            Qualitätsmanagement im Gesundheits- und Sozialwesen.
-          </p>
-
-          <a href="#gesundheitswesen">Seminare ansehen →</a>
-        </article>
-
-
-        <article class="area-card">
-          <div class="area-icon icon-blue">04</div>
-          <div class="area-number">04 · 3 SEMINARE</div>
-
-          <h3>Gesundheit & Resilienz</h3>
-
-          <p>
-            Psychische Gesundheit stärken, Ressourcen fördern und einen
-            gesunden Arbeitsalltag gemeinsam gestalten.
-          </p>
-
-          <a href="#resilienz">Seminare ansehen →</a>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="seminar-detail-section">
-
-    <div class="container">
-
-      <div class="seminar-category" id="inklusion">
-
-        <div class="section-kicker">01 · Inklusion & Teilhabe</div>
-        <h3>Seminarangebote</h3>
-
-        <div class="seminar-list">
-          <div class="seminar-item">Neurodiversität verstehen und Potenziale fördern</div>
-
-          <div class="seminar-item">Körperliche Behinderungen im Berufs- und Bildungsalltag</div>
-
-          <div class="seminar-item">Ableismus erkennen und reflektieren</div>
-
-          <div class="seminar-item">Selbstbestimmung und Empowerment bei Behinderung</div>
-
-          <div class="seminar-item">Rechtliche Grundlagen der Inklusion und Teilhabe</div>
-
-          <div class="seminar-item">Inklusive Organisationsentwicklung</div>
-        
-
-        <a class="button button-red area-request-button" href="#anfrage">Seminar anfragen</a>
-      </div>
-
-      </div>
-
-
-      <div class="seminar-category" id="paedagogik">
-
-        <div class="section-kicker">02 · Pädagogik & Ausbildung</div>
-        <h3>Seminarangebote</h3>
-
-        <div class="seminar-list">
-          <div class="seminar-item gold">Vorbereitung auf die Ausbildereignungsprüfung (AEVO)</div>
-
-          <div class="seminar-item gold">Inklusive Freizeitpädagogik – Bewegung & Kreativität</div>
-
-          <div class="seminar-item gold">Pädagogische Konzepte und Ansätze im Überblick</div>
-
-          <div class="seminar-item gold">Rechtliche Grundlagen in pädagogischen Arbeitsfeldern</div>
-
-          <div class="seminar-item gold">Entwicklungspsychologie in der pädagogischen Praxis</div>
-        
-
-        <a class="button button-red area-request-button" href="#anfrage">Seminar anfragen</a>
-      </div>
-
-      </div>
-
-
-      <div class="seminar-category" id="gesundheitswesen">
-
-        <div class="section-kicker">03 · Gesundheits- & Sozialwesen</div>
-        <h3>Seminarangebote</h3>
-
-        <div class="seminar-list">
-          <div class="seminar-item terra">Aufbau & Organisation des Gesundheits- und Sozialwesens</div>
-
-          <div class="seminar-item terra">Rechnungswesen im Gesundheits- und Sozialwesen</div>
-
-          <div class="seminar-item terra">Qualitätsmanagement im Gesundheits- und Sozialwesen</div>
-        
-
-        <a class="button button-red area-request-button" href="#anfrage">Seminar anfragen</a>
-      </div>
-
-      </div>
-
-
-      <div class="seminar-category" id="resilienz">
-
-        <div class="section-kicker">04 · Gesundheit & Resilienz</div>
-        <h3>Seminarangebote</h3>
-
-        <div class="seminar-list">
-          <div class="seminar-item blue">Psychische Gesundheit als Arbeitnehmer:in</div>
-
-          <div class="seminar-item blue">Psychische Gesundheit als Arbeitgeber:in</div>
-
-          <div class="seminar-item blue">Psychische Gesundheit im Team</div>
-        
-
-        <a class="button button-red area-request-button" href="#anfrage">Seminar anfragen</a>
-      </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="about-section" id="ueber-mich">
-
-    <div class="container about-grid">
-
-      <div class="about-copy">
-
-        <div class="section-kicker">Über mich</div>
-
-        <h2 class="section-title">
-          Fachwissen trifft Praxis.
-        </h2>
-
-        <p>
-          Ich bin Niklas Gorczynski, Fachdozent, Bildungsreferent und
-          AEVO-Ausbilder.
-        </p>
-
-        <p>
-          Als Fachdozent und Bildungsreferent vermittle ich praxisnahes
-          Fachwissen in den Bereichen Gesundheits- und Sozialwesen,
-          Pädagogik, Erwachsenenbildung sowie Inklusion.
-        </p>
-
-        <p>
-          Durch meine Erfahrungen in Lehre, Sozialberatung und dem
-          Gesundheitswesen verbinde ich fundierte Fachkenntnisse mit
-          praxisorientierten Methoden.
-        </p>
-
-        <p>
-          Persönliche Erfahrungen mit Behinderung und Teilhabe ergänzen
-          meine fachliche Perspektive und prägen mein Verständnis von
-          inklusiver Bildung.
-        </p>
-
-        <a href="#kontakt" class="button button-red">
-          Kontakt aufnehmen
-        </a>
-
-      </div>
-
-
-      <aside class="qualification-card">
-
-        <h3>Qualifikationen</h3>
-
-        <ul>
-          <li>Fachwirt im Gesundheits- und Sozialwesen (IHK)</li>
-          <li>Bachelor Professional in Health and Social Services</li>
-          <li>Staatlich anerkannter Erzieher</li>
-          <li>Ausbildereignung nach AEVO</li>
-          <li>Praxis in Erwachsenenbildung, Sozial- und Gesundheitswesen</li>
-        </ul>
-
-      </aside>
-
-    </div>
-  </section>
-
-
-  <section class="why-section">
-
-    <div class="container">
-
-      <div class="why-heading">
-        <div class="section-kicker">Warum mit mir arbeiten?</div>
-      </div>
-
-      <div class="why-grid">
-
-        <div class="why-item">
-          <div class="why-symbol">01</div>
-          <h4>Praxisnah & verständlich</h4>
-          <p>
-            Komplexe Inhalte klar erklärt und direkt anwendbar.
-          </p>
-        </div>
-
-        <div class="why-item">
-          <div class="why-symbol">02</div>
-          <h4>Individuell & flexibel</h4>
-          <p>
-            Anpassung an Zielgruppe, Themen und Rahmenbedingungen.
-          </p>
-        </div>
-
-        <div class="why-item">
-          <div class="why-symbol">03</div>
-          <h4>Erfahren & qualifiziert</h4>
-          <p>
-            Verbindung aus Fachwissen, beruflicher Praxis und Didaktik.
-          </p>
-        </div>
-
-        <div class="why-item">
-          <div class="why-symbol">04</div>
-          <h4>Nachhaltig & wirksam</h4>
-          <p>
-            Wissen, das im Berufs- und Bildungsalltag weiterwirkt.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="custom-section" id="individuell">
-
-    <div class="container">
-
-      <div class="custom-box">
-
-        <div class="custom-icon">+</div>
-
-        <div>
-          <h3>Nicht das richtige Seminar gefunden?</h3>
-
-          <p>
-            Gerne entwickle ich individuelle Fachvorträge, Workshops oder
-            Seminare – passgenau auf die Anforderungen Ihrer Einrichtung,
-            Ihres Unternehmens oder Ihrer Zielgruppe abgestimmt.
-          </p>
-        </div>
-
-        <a href="#kontakt" class="button button-red">
-          Bildungsangebot anfragen
-        </a>
-
-      </div>
-
-    </div>
-  </section>
-
-
-
-
-  <section class="request-section" id="anfrage">
-    <div class="container">
-
-      <div class="request-heading">
-        <div class="section-kicker">Unverbindliche Anfrage</div>
-        <h2 class="section-title">Welches Bildungsangebot passt zu Ihnen?</h2>
-        <p class="section-intro">
-          Wählen Sie ein Seminar aus und senden Sie mir die wichtigsten
-          Eckdaten. Ich melde mich anschließend persönlich bei Ihnen zurück.
-        </p>
-      </div>
-
-      <form class="request-form" id="seminarRequestForm"
-            action="https://api.web3forms.com/submit" method="POST">
-
-        <input type="hidden" name="access_key"
-               value="9d895ef4-50ab-48f7-a302-5f071be66f15">
-        <input type="hidden" name="subject"
-               value="Neue Seminaranfrage über die Conexus-Website">
-        <input type="checkbox" name="botcheck" style="display:none;">
-
-        <div class="form-grid">
-
-          <div class="form-group">
-            <label for="request-name">Name / Ansprechpartner:in *</label>
-            <input id="request-name" type="text" name="name" autocomplete="name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="request-organisation">Unternehmen / Einrichtung</label>
-            <input id="request-organisation" type="text" name="organisation" autocomplete="organization">
-          </div>
-
-          <div class="form-group">
-            <label for="request-email">E-Mail-Adresse *</label>
-            <input id="request-email" type="email" name="email" autocomplete="email" required>
-          </div>
-
-          <div class="form-group">
-            <label for="request-phone">Telefon</label>
-            <input id="request-phone" type="tel" name="telefon" autocomplete="tel">
-          </div>
-
-          <div class="form-group full">
-            <label for="seminar-select">Seminar auswählen *</label>
-            <select id="seminar-select" name="seminar" required>
-              <option value="" selected disabled>Bitte Seminar auswählen</option>
-              <option value="Neurodiversität verstehen und Potenziale fördern">Neurodiversität verstehen und Potenziale fördern</option>
-              <option value="Körperliche Behinderungen im Berufs- und Bildungsalltag">Körperliche Behinderungen im Berufs- und Bildungsalltag</option>
-              <option value="Ableismus erkennen und reflektieren">Ableismus erkennen und reflektieren</option>
-              <option value="Selbstbestimmung und Empowerment bei Behinderung">Selbstbestimmung und Empowerment bei Behinderung</option>
-              <option value="Rechtliche Grundlagen der Inklusion und Teilhabe">Rechtliche Grundlagen der Inklusion und Teilhabe</option>
-              <option value="Inklusive Organisationsentwicklung">Inklusive Organisationsentwicklung</option>
-              <option value="Vorbereitung auf die Ausbildereignungsprüfung (AEVO)">Vorbereitung auf die Ausbildereignungsprüfung (AEVO)</option>
-              <option value="Inklusive Freizeitpädagogik – Bewegung & Kreativität">Inklusive Freizeitpädagogik – Bewegung & Kreativität</option>
-              <option value="Pädagogische Konzepte und Ansätze im Überblick">Pädagogische Konzepte und Ansätze im Überblick</option>
-              <option value="Rechtliche Grundlagen in pädagogischen Arbeitsfeldern">Rechtliche Grundlagen in pädagogischen Arbeitsfeldern</option>
-              <option value="Entwicklungspsychologie in der pädagogischen Praxis">Entwicklungspsychologie in der pädagogischen Praxis</option>
-              <option value="Aufbau & Organisation des Gesundheits- und Sozialwesens">Aufbau & Organisation des Gesundheits- und Sozialwesens</option>
-              <option value="Rechnungswesen im Gesundheits- und Sozialwesen">Rechnungswesen im Gesundheits- und Sozialwesen</option>
-              <option value="Qualitätsmanagement im Gesundheits- und Sozialwesen">Qualitätsmanagement im Gesundheits- und Sozialwesen</option>
-              <option value="Psychische Gesundheit als Arbeitnehmer:in">Psychische Gesundheit als Arbeitnehmer:in</option>
-              <option value="Psychische Gesundheit als Arbeitgeber:in">Psychische Gesundheit als Arbeitgeber:in</option>
-              <option value="Psychische Gesundheit im Team">Psychische Gesundheit im Team</option>
-              <option value="Individuelles Angebot">Individuelles Angebot / anderes Thema</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="request-format">Format</label>
-            <select id="request-format" name="format">
-              <option value="Noch offen">Noch offen</option>
-              <option value="Präsenz">Präsenz</option>
-              <option value="Online">Online</option>
-              <option value="Hybrid">Hybrid</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="request-participants">Teilnehmerzahl</label>
-            <input id="request-participants" type="number" name="teilnehmerzahl" min="1" placeholder="z. B. 15">
-          </div>
-
-          <div class="form-group">
-            <label for="request-date">Wunschtermin</label>
-            <input id="request-date" type="date" name="wunschtermin">
-          </div>
-
-          <div class="form-group">
-            <label for="request-location">Ort / Veranstaltungsort</label>
-            <input id="request-location" type="text" name="veranstaltungsort"
-                   placeholder="z. B. Düsseldorf oder online">
-          </div>
-
-          <div class="form-group full">
-            <label for="request-message">Nachricht / individuelle Wünsche *</label>
-            <textarea id="request-message" name="message"
-                      placeholder="Was ist Ihnen für das Seminar besonders wichtig?"
-                      required></textarea>
-          </div>
-
-          <div class="checkbox-row">
-            <input id="privacy-consent" type="checkbox"
-                   name="datenschutz_bestaetigt" value="Ja" required>
-            <label for="privacy-consent">
-              Ich habe die <a href="#datenschutz">Datenschutzerklärung</a>
-              zur Kenntnis genommen und stimme der Übermittlung meiner Angaben
-              zur Bearbeitung dieser Anfrage zu. *
-            </label>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="button button-red form-submit">
-              Unverbindlich anfragen
-            </button>
-            <span class="form-status" id="formStatus" aria-live="polite"></span>
-          </div>
-
-        </div>
-      </form>
-    </div>
-  </section>
-
-
-  <section class="downloads-section" id="downloads">
-
-    <div class="container">
-
-      <div class="downloads-heading">
-
-        <div class="section-kicker">Downloads</div>
-
-        <h2 class="section-title">
-          Alle Informationen auf einen Blick.
-        </h2>
-
-        <p class="section-intro">
-          Hier können Sie mein aktuelles Seminarportfolio und mein
-          Referentenprofil direkt als PDF herunterladen.
-        </p>
-
-      </div>
-
-      <div class="download-grid">
-
-        <article class="download-card">
-
-          <div class="download-symbol">↓</div>
-
-          <h3>Seminarportfolio</h3>
-
-          <p>
-            Alle 17 Seminarangebote, Bildungsbereiche, Formate und
-            Themenschwerpunkte von Conexus im Überblick.
-          </p>
-
-          <a
-            href="conexus-seminarportfolio.pdf"
-            download
-            class="button button-red"
+        <div class="form-group">
+          <label for="request-organisation">Unternehmen / Einrichtung</label>
+          <input
+            id="request-organisation"
+            type="text"
+            name="organisation"
+            autocomplete="organization"
           >
-            Seminarportfolio herunterladen
-          </a>
+        </div>
 
-        </article>
-
-        <article class="download-card">
-
-          <div class="download-symbol">↓</div>
-
-          <h3>Referentenprofil</h3>
-
-          <p>
-            Qualifikationen, Themenschwerpunkte und berufliche Praxis
-            kompakt als PDF zusammengefasst.
-          </p>
-
-          <a
-            href="niklas-gorczynski-referentenprofil.pdf"
-            download
-            class="button button-outline"
+        <div class="form-group">
+          <label for="request-email">E-Mail-Adresse *</label>
+          <input
+            id="request-email"
+            type="email"
+            name="email"
+            autocomplete="email"
+            required
           >
-            Referentenprofil herunterladen
-          </a>
+        </div>
 
-        </article>
+        <div class="form-group">
+          <label for="request-phone">Telefon</label>
+          <input
+            id="request-phone"
+            type="tel"
+            name="telefon"
+            autocomplete="tel"
+          >
+        </div>
+
+        <div class="form-group full">
+          <label for="seminar-select">Seminar auswählen *</label>
+
+          <select id="seminar-select" name="seminar" required>
+            <option value="" selected disabled>Bitte Seminar auswählen</option>
+            <option value="Neurodiversität verstehen und Potenziale fördern">Neurodiversität verstehen und Potenziale fördern</option>
+            <option value="Körperliche Behinderungen im Berufs- und Bildungsalltag">Körperliche Behinderungen im Berufs- und Bildungsalltag</option>
+            <option value="Ableismus erkennen und reflektieren">Ableismus erkennen und reflektieren</option>
+            <option value="Selbstbestimmung und Empowerment bei Behinderung">Selbstbestimmung und Empowerment bei Behinderung</option>
+            <option value="Rechtliche Grundlagen der Inklusion und Teilhabe">Rechtliche Grundlagen der Inklusion und Teilhabe</option>
+            <option value="Inklusive Organisationsentwicklung">Inklusive Organisationsentwicklung</option>
+            <option value="Vorbereitung auf die Ausbildereignungsprüfung (AEVO)">Vorbereitung auf die Ausbildereignungsprüfung (AEVO)</option>
+            <option value="Inklusive Freizeitpädagogik – Bewegung & Kreativität">Inklusive Freizeitpädagogik – Bewegung & Kreativität</option>
+            <option value="Pädagogische Konzepte und Ansätze im Überblick">Pädagogische Konzepte und Ansätze im Überblick</option>
+            <option value="Rechtliche Grundlagen in pädagogischen Arbeitsfeldern">Rechtliche Grundlagen in pädagogischen Arbeitsfeldern</option>
+            <option value="Entwicklungspsychologie in der pädagogischen Praxis">Entwicklungspsychologie in der pädagogischen Praxis</option>
+            <option value="Aufbau & Organisation des Gesundheits- und Sozialwesens">Aufbau & Organisation des Gesundheits- und Sozialwesens</option>
+            <option value="Rechnungswesen im Gesundheits- und Sozialwesen">Rechnungswesen im Gesundheits- und Sozialwesen</option>
+            <option value="Qualitätsmanagement im Gesundheits- und Sozialwesen">Qualitätsmanagement im Gesundheits- und Sozialwesen</option>
+            <option value="Psychische Gesundheit als Arbeitnehmer:in">Psychische Gesundheit als Arbeitnehmer:in</option>
+            <option value="Psychische Gesundheit als Arbeitgeber:in">Psychische Gesundheit als Arbeitgeber:in</option>
+            <option value="Psychische Gesundheit im Team">Psychische Gesundheit im Team</option>
+            <option value="Individuelles Angebot">Individuelles Angebot / anderes Thema</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="request-format">Format</label>
+
+          <select id="request-format" name="format">
+            <option value="Noch offen">Noch offen</option>
+            <option value="Präsenz">Präsenz</option>
+            <option value="Online">Online</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="request-participants">Teilnehmerzahl</label>
+          <input
+            id="request-participants"
+            type="number"
+            name="teilnehmerzahl"
+            min="1"
+            placeholder="z. B. 15"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="request-date">Wunschtermin</label>
+          <input
+            id="request-date"
+            type="date"
+            name="wunschtermin"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="request-location">Ort / Veranstaltungsort</label>
+          <input
+            id="request-location"
+            type="text"
+            name="veranstaltungsort"
+            placeholder="z. B. Düsseldorf oder online"
+          >
+        </div>
+
+        <div class="form-group full">
+          <label for="request-message">
+            Nachricht / individuelle Wünsche *
+          </label>
+
+          <textarea
+            id="request-message"
+            name="message"
+            placeholder="Was ist Ihnen für das Seminar besonders wichtig?"
+            required
+          ></textarea>
+        </div>
+
+        <div class="checkbox-row">
+          <input
+            id="privacy-consent"
+            type="checkbox"
+            name="datenschutz_bestaetigt"
+            value="Ja"
+            required
+          >
+
+          <label for="privacy-consent">
+            Ich habe die
+            <a href="#datenschutz">Datenschutzerklärung</a>
+            zur Kenntnis genommen und stimme der Übermittlung meiner Angaben
+            zur Bearbeitung dieser Anfrage zu. *
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button
+            type="submit"
+            class="button button-red form-submit"
+          >
+            Unverbindlich anfragen
+          </button>
+
+          <span
+            class="form-status"
+            id="formStatus"
+            aria-live="polite"
+          ></span>
+        </div>
 
       </div>
+    </form>
 
+  </div>
+</section>
+
+
+<section class="downloads-section" id="downloads">
+  <div class="container">
+
+    <div class="downloads-heading">
+      <div class="section-kicker">Downloads</div>
+
+      <h2 class="section-title">
+        Alle Informationen auf einen Blick.
+      </h2>
+
+      <p class="section-intro">
+        Hier können Sie mein aktuelles Seminarportfolio und mein
+        Referentenprofil direkt als PDF herunterladen.
+      </p>
     </div>
 
-  </section>
+    <div class="download-grid">
 
+      <article class="download-card">
+        <div class="download-symbol">↓</div>
 
-  <section class="request-section" id="arbeitgeberbefragung">
-    <div class="container">
+        <h3>Seminarportfolio</h3>
 
-      <div class="request-heading">
-        <div class="section-kicker">Praxisbefragung</div>
-
-        <h2 class="section-title">
-          Ihre Perspektive aus der Praxis zählt.
-        </h2>
-
-        <p class="section-intro">
-          Conexus untersucht aktuell, welche Faktoren Einstellungsentscheidungen
-          bei fachlich geeigneten Menschen mit Schwerbehinderung beeinflussen.
-          Die anonyme Befragung richtet sich an Personen, die an Personal-,
-          Ausbildungs- oder Einstellungsentscheidungen beteiligt sind.
-          Die Teilnahme dauert etwa 3 Minuten.
+        <p>
+          Alle 17 Seminarangebote, Bildungsbereiche, Formate und
+          Themenschwerpunkte von Conexus im Überblick.
         </p>
 
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScPRVA8KYpjsnhj4wSf0mG6-mDMGBGzWj-gjRMcgdcKrZJl1w/viewform?usp=publish-editor"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="conexus-seminarportfolio.pdf"
+          download
           class="button button-red"
         >
-          An der Arbeitgeberbefragung teilnehmen
+          Seminarportfolio herunterladen
         </a>
-      </div>
+      </article>
 
-    </div>
-  </section>
+      <article class="download-card">
+        <div class="download-symbol">↓</div>
 
-
-  <section class="contact-section" id="kontakt">
-
-    <div class="container contact-grid">
-
-      <div>
-
-        <div class="section-kicker" style="color:white;">
-          Kontakt
-        </div>
-
-        <h2 class="section-title">
-          Lassen Sie uns ins Gespräch kommen.
-        </h2>
+        <h3>Referentenprofil</h3>
 
         <p>
-          Sie interessieren sich für einen Fachvortrag, einen Workshop oder
-          ein Seminar? Ich freue mich darauf, gemeinsam ein passendes
-          Bildungsangebot zu entwickeln.
+          Qualifikationen, Themenschwerpunkte und berufliche Praxis
+          kompakt als PDF zusammengefasst.
         </p>
 
-      </div>
-
-
-      <div class="contact-details">
-
-        <a href="mailto:conexus.bildung.inklusion@web.de">
-          ✉ conexus.bildung.inklusion@web.de
+        <a
+          href="niklas-gorczynski-referentenprofil.pdf"
+          download
+          class="button button-outline"
+        >
+          Referentenprofil herunterladen
         </a>
-          <a href="https://www.instagram.com/conexus_bildung.inklusion/" target="_blank" rel="noopener noreferrer">Instagram: @conexus_bildung.inklusion</a>
+      </article>
 
-        <a href="tel:+4915738993227">
-          ☎ 01573 / 8993227
-        </a>
+    </div>
+  </div>
+</section>
 
+
+<section class="request-section" id="arbeitgeberbefragung">
+  <div class="container">
+
+    <div class="request-heading">
+      <div class="section-kicker">Praxisbefragung</div>
+
+      <h2 class="section-title">
+        Ihre Perspektive aus der Praxis zählt.
+      </h2>
+
+      <p class="section-intro">
+        Conexus untersucht aktuell, welche Faktoren Einstellungsentscheidungen
+        bei fachlich geeigneten Menschen mit Schwerbehinderung beeinflussen.
+        Die anonyme Befragung richtet sich an Personen, die an Personal-,
+        Ausbildungs- oder Einstellungsentscheidungen beteiligt sind.
+        Die Teilnahme dauert etwa 3 Minuten.
+      </p>
+
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLScPRVA8KYpjsnhj4wSf0mG6-mDMGBGzWj-gjRMcgdcKrZJl1w/viewform?usp=publish-editor"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button-red"
+      >
+        An der Arbeitgeberbefragung teilnehmen
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="contact-section" id="kontakt">
+  <div class="container contact-grid">
+
+    <div>
+      <div class="section-kicker" style="color:white;">
+        Kontakt
       </div>
 
-    </div>
-  </section>
+      <h2 class="section-title">
+        Lassen Sie uns ins Gespräch kommen.
+      </h2>
 
-
-
-  <section class="legal-section" id="impressum">
-    <div class="container legal-wrap">
-      <div class="section-kicker">Rechtliches</div>
-      <h2>Impressum</h2>
-
-      <p><strong>Angaben gemäß § 5 DDG</strong></p>
       <p>
-        Niklas Gorczynski<br>
-        Conexus – Bildung &amp; Inklusion<br>
-        Schönaustraße 19<br>
-        40625 Düsseldorf
-      </p>
-
-      <h3>Kontakt</h3>
-      <p>
-        Telefon: <a href="tel:+4915738993227">01573 / 8993227</a><br>
-        E-Mail:
-        <a href="mailto:conexus.bildung.inklusion@web.de">
-          conexus.bildung.inklusion@web.de
-        </a>
+        Sie interessieren sich für einen Fachvortrag, einen Workshop oder
+        ein Seminar? Ich freue mich darauf, gemeinsam ein passendes
+        Bildungsangebot zu entwickeln.
       </p>
     </div>
-  </section>
 
-  <section class="legal-section" id="datenschutz">
-    <div class="container legal-wrap">
-      <div class="section-kicker">Rechtliches</div>
-      <h2>Datenschutzerklärung</h2>
+    <div class="contact-details">
 
-      <h3>1. Verantwortlicher</h3>
-      <p>
-        Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
-        Niklas Gorczynski<br>
-        Conexus – Bildung &amp; Inklusion<br>
-        Schönaustraße 19<br>
-        40625 Düsseldorf<br>
-        E-Mail:
-        <a href="mailto:conexus.bildung.inklusion@web.de">
-          conexus.bildung.inklusion@web.de
-        </a><br>
-        Telefon: <a href="tel:+4915738993227">01573 / 8993227</a>
-      </p>
+      <a href="mailto:conexus.bildung.inklusion@web.de">
+        ✉ conexus.bildung.inklusion@web.de
+      </a>
 
-      <h3>2. Hosting über GitHub Pages</h3>
-      <p>
-        Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der
-        Website verarbeitet GitHub technisch erforderliche Verbindungsdaten,
-        insbesondere die IP-Adresse des aufrufenden Geräts. Die Verarbeitung
-        erfolgt, soweit sie in meinem Verantwortungsbereich liegt, auf Grundlage
-        meines berechtigten Interesses an einer sicheren und zuverlässigen
-        Bereitstellung dieser Website gemäß Art. 6 Abs. 1 lit. f DSGVO.
-      </p>
-      <p>
-        Anbieter ist GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco,
-        CA 94107, USA. Eine Verarbeitung personenbezogener Daten kann daher auch
-        außerhalb der Europäischen Union stattfinden. Weitere Informationen
-        finden Sie in der Datenschutzerklärung von GitHub:
-        <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement"
-           target="_blank" rel="noopener noreferrer">
-          GitHub Privacy Statement
-        </a>.
-      </p>
+      <a
+        href="https://www.instagram.com/conexus_bildung.inklusion/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram: @conexus_bildung.inklusion
+      </a>
 
-      <h3>3. Kontaktaufnahme</h3>
-      <p>
-        Wenn Sie mich per E-Mail oder telefonisch kontaktieren, werden die von
-        Ihnen übermittelten Angaben zur Bearbeitung Ihrer Anfrage und für
-        mögliche Anschlussfragen verarbeitet. Rechtsgrundlage ist je nach Inhalt
-        der Anfrage Art. 6 Abs. 1 lit. b DSGVO oder Art. 6 Abs. 1 lit. f DSGVO.
-        Die Daten werden gelöscht, sobald sie für den jeweiligen Zweck nicht
-        mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten
-        entgegenstehen.
-      </p>
+      <a href="tel:+4915738993227">
+        ☎ 01573 / 8993227
+      </a>
 
-      <h3>4. Google Fonts</h3>
-      <p>
-        Zur einheitlichen Darstellung von Schriftarten werden auf dieser Website
-        derzeit Google Fonts eingebunden. Beim Aufruf der Website kann dabei eine
-        Verbindung zu Servern von Google hergestellt und insbesondere die
-        IP-Adresse des aufrufenden Geräts verarbeitet werden. Anbieter ist
-        Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
-        Eine Verarbeitung personenbezogener Daten kann daher auch außerhalb der
-        Europäischen Union stattfinden.
-      </p>
-
-      <h3>5. Anfrageformular über Web3Forms</h3>
-      <p>
-        Für das Anfrageformular nutze ich den Dienst Web3Forms. Wenn Sie das
-        Formular absenden, werden die von Ihnen eingegebenen Daten an Web3Forms
-        übermittelt und zur Zustellung der Anfrage an meine E-Mail-Adresse
-        verarbeitet. Weitere Informationen finden Sie in der
-        <a href="https://web3forms.com/privacy"
-           target="_blank" rel="noopener noreferrer">
-          Datenschutzerklärung von Web3Forms
-        </a>.
-      </p>
-      <p>
-        Nach Angaben des Anbieters befinden sich die eingesetzten Server in den
-        USA. Dadurch kann eine Verarbeitung personenbezogener Daten außerhalb
-        der Europäischen Union stattfinden. Bitte übermitteln Sie über das
-        Formular nur Angaben, die für Ihre Anfrage erforderlich sind.
-      </p>
-
-      <h3>6. Cookies und Analyse</h3>
-      <p>
-        Auf dieser Website setze ich derzeit keine eigenen Analyse- oder
-        Marketingtools und keine eigenen nicht technisch erforderlichen
-        Cookies ein.
-      </p>
-
-      <h3>7. Ihre Rechte</h3>
-      <p>
-        Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere das
-        Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
-        Verarbeitung, Datenübertragbarkeit und Widerspruch. Außerdem besteht
-        ein Beschwerderecht bei einer zuständigen Datenschutzaufsichtsbehörde.
-      </p>
-
-      <h3>8. Aktualität</h3>
-      <p>
-        Diese Datenschutzerklärung wird angepasst, wenn sich die eingesetzten
-        Dienste oder die Datenverarbeitung auf dieser Website ändern.
-      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
 
-    <div class="container footer-inner">
+<section class="legal-section" id="impressum">
+  <div class="container legal-wrap">
 
-      <div>
-        © 2026 Conexus – Bildung & Inklusion
+    <div class="section-kicker">Rechtliches</div>
+    <h2>Impressum</h2>
+
+    <p><strong>Angaben gemäß § 5 DDG</strong></p>
+
+    <p>
+      Niklas Gorczynski<br>
+      Conexus – Bildung &amp; Inklusion<br>
+      Schönaustraße 19<br>
+      40625 Düsseldorf
+    </p>
+
+    <h3>Kontakt</h3>
+
+    <p>
+      Telefon:
+      <a href="tel:+4915738993227">01573 / 8993227</a><br>
+
+      E-Mail:
+      <a href="mailto:conexus.bildung.inklusion@web.de">
+        conexus.bildung.inklusion@web.de
+      </a>
+    </p>
+
+  </div>
+</section>
+
+
+<section class="legal-section" id="datenschutz">
+  <div class="container legal-wrap">
+
+    <div class="section-kicker">Rechtliches</div>
+    <h2>Datenschutzerklärung</h2>
+
+    <h3>1. Verantwortlicher</h3>
+
+    <p>
+      Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+      Niklas Gorczynski<br>
+      Conexus – Bildung &amp; Inklusion<br>
+      Schönaustraße 19<br>
+      40625 Düsseldorf<br>
+      E-Mail:
+      <a href="mailto:conexus.bildung.inklusion@web.de">
+        conexus.bildung.inklusion@web.de
+      </a><br>
+      Telefon:
+      <a href="tel:+4915738993227">01573 / 8993227</a>
+    </p>
+
+    <h3>2. Hosting über GitHub Pages</h3>
+
+    <p>
+      Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der
+      Website verarbeitet GitHub technisch erforderliche Verbindungsdaten,
+      insbesondere die IP-Adresse des aufrufenden Geräts. Die Verarbeitung
+      erfolgt, soweit sie in meinem Verantwortungsbereich liegt, auf Grundlage
+      meines berechtigten Interesses an einer sicheren und zuverlässigen
+      Bereitstellung dieser Website gemäß Art. 6 Abs. 1 lit. f DSGVO.
+    </p>
+
+    <p>
+      Anbieter ist GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco,
+      CA 94107, USA. Eine Verarbeitung personenbezogener Daten kann daher auch
+      außerhalb der Europäischen Union stattfinden. Weitere Informationen
+      finden Sie in der Datenschutzerklärung von GitHub:
+      <a
+        href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub Privacy Statement
+      </a>.
+    </p>
+
+    <h3>3. Kontaktaufnahme</h3>
+
+    <p>
+      Wenn Sie mich per E-Mail oder telefonisch kontaktieren, werden die von
+      Ihnen übermittelten Angaben zur Bearbeitung Ihrer Anfrage und für
+      mögliche Anschlussfragen verarbeitet. Rechtsgrundlage ist je nach Inhalt
+      der Anfrage Art. 6 Abs. 1 lit. b DSGVO oder Art. 6 Abs. 1 lit. f DSGVO.
+      Die Daten werden gelöscht, sobald sie für den jeweiligen Zweck nicht
+      mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten
+      entgegenstehen.
+    </p>
+
+    <h3>4. Google Fonts</h3>
+
+    <p>
+      Zur einheitlichen Darstellung von Schriftarten werden auf dieser Website
+      derzeit Google Fonts eingebunden. Beim Aufruf der Website kann dabei eine
+      Verbindung zu Servern von Google hergestellt und insbesondere die
+      IP-Adresse des aufrufenden Geräts verarbeitet werden. Anbieter ist
+      Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
+      Eine Verarbeitung personenbezogener Daten kann daher auch außerhalb der
+      Europäischen Union stattfinden.
+    </p>
+
+    <h3>5. Anfrageformular über Web3Forms</h3>
+
+    <p>
+      Für das Anfrageformular nutze ich den Dienst Web3Forms. Wenn Sie das
+      Formular absenden, werden die von Ihnen eingegebenen Daten an Web3Forms
+      übermittelt und zur Zustellung der Anfrage an meine E-Mail-Adresse
+      verarbeitet. Weitere Informationen finden Sie in der
+      <a
+        href="https://web3forms.com/privacy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Datenschutzerklärung von Web3Forms
+      </a>.
+    </p>
+
+    <p>
+      Nach Angaben des Anbieters befinden sich die eingesetzten Server in den
+      USA. Dadurch kann eine Verarbeitung personenbezogener Daten außerhalb
+      der Europäischen Union stattfinden. Bitte übermitteln Sie über das
+      Formular nur Angaben, die für Ihre Anfrage erforderlich sind.
+    </p>
+
+    <h3>6. Cookies und Analyse</h3>
+
+    <p>
+      Auf dieser Website setze ich derzeit keine eigenen Analyse- oder
+      Marketingtools und keine eigenen nicht technisch erforderlichen
+      Cookies ein.
+    </p>
+
+    <h3>7. Ihre Rechte</h3>
+
+    <p>
+      Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere das
+      Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
+      Verarbeitung, Datenübertragbarkeit und Widerspruch. Außerdem besteht
+      ein Beschwerderecht bei einer zuständigen Datenschutzaufsichtsbehörde.
+    </p>
+
+    <h3>8. Aktualität</h3>
+
+    <p>
+      Diese Datenschutzerklärung wird angepasst, wenn sich die eingesetzten
+      Dienste oder die Datenverarbeitung auf dieser Website ändern.
+    </p>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="container footer-inner">
+
+    <div>
+      © 2026 Conexus – Bildung & Inklusion
+    </div>
+
+    <div>
+      Niklas Gorczynski · Fachdozent | Bildungsreferent | AEVO-Ausbilder
+
+      <div class="footer-links">
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
       </div>
-
-      <div>
-        Niklas Gorczynski · Fachdozent | Bildungsreferent | AEVO-Ausbilder
-        <div class="footer-links">
-          <a href="#impressum">Impressum</a>
-          <a href="#datenschutz">Datenschutz</a>
-        </div>
-      </div>
-
     </div>
-  </footer>
+
+  </div>
+</footer>
 
 
-    <button
-    class="read-aloud"
-    id="readAloudButton"
-    type="button"
-    aria-label="Seite vorlesen"
-    title="Seite vorlesen"
-  >🔊</button>
+<button
+  class="read-aloud"
+  id="readAloudButton"
+  type="button"
+  aria-label="Seite vorlesen"
+  title="Seite vorlesen"
+>
+  🔊
+</button>
 
-<a href="#start" class="back-to-top" id="backToTop" aria-label="Nach oben">
-    ↑
-  </a>
+<a
+  href="#start"
+  class="back-to-top"
+  id="backToTop"
+  aria-label="Nach oben"
+>
+  ↑
+</a>
 
-  <script>
-    const backToTop = document.getElementById("backToTop");
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 500) {
-        backToTop.classList.add("visible");
-      } else {
-        backToTop.classList.remove("visible");
-      }
+<script>
+  /* NACH OBEN */
+
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+      backToTop.classList.add("visible");
+    } else {
+      backToTop.classList.remove("visible");
+    }
+  });
+
+
+  /* SEMINAR-SLIDER */
+
+  (() => {
+    const slides = [
+      "seminar-einblick-01.jpg",
+      "seminar-einblick-02.jpg",
+      "seminar-einblick-03.jpg",
+      "seminar-einblick-04.jpg",
+      "seminar-einblick-05.jpg"
+    ];
+
+    const slideImage = document.getElementById("seminarSlide");
+    const counter = document.getElementById("slideCounter");
+    const prevButton = document.querySelector(".slider-prev");
+    const nextButton = document.querySelector(".slider-next");
+    const thumbs = document.querySelectorAll(".slide-thumb");
+
+    if (!slideImage || !counter || !prevButton || !nextButton) {
+      return;
+    }
+
+    let currentSlide = 0;
+
+    const showSlide = (index) => {
+      currentSlide = (index + slides.length) % slides.length;
+
+      slideImage.src = slides[currentSlide];
+      slideImage.alt =
+        `Seminar-Einblick Folie ${currentSlide + 1} von ${slides.length}`;
+
+      counter.textContent =
+        `${currentSlide + 1} / ${slides.length}`;
+
+      thumbs.forEach((thumb, index) => {
+        thumb.classList.toggle("active", index === currentSlide);
+      });
+    };
+
+    prevButton.addEventListener("click", () => {
+      showSlide(currentSlide - 1);
     });
 
+    nextButton.addEventListener("click", () => {
+      showSlide(currentSlide + 1);
+    });
 
-    const seminarRequestForm = document.getElementById("seminarRequestForm");
-    const formStatus = document.getElementById("formStatus");
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        showSlide(Number(thumb.dataset.slide));
+      });
+    });
+  })();
 
-    seminarRequestForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
 
-      const submitButton = seminarRequestForm.querySelector('button[type="submit"]');
-      const originalText = submitButton.textContent;
+  /* SNEAK-PEEK → ANFRAGEFORMULAR */
 
-      submitButton.disabled = true;
-      submitButton.textContent = "Wird gesendet …";
-      formStatus.textContent = "";
+  const previewRequestButton =
+    document.getElementById("previewRequestButton");
 
-      try {
-        const response = await fetch("https://api.web3forms.com/submit", {
+  const seminarSelect =
+    document.getElementById("seminar-select");
+
+  if (previewRequestButton && seminarSelect) {
+    previewRequestButton.addEventListener("click", () => {
+      seminarSelect.value =
+        "Körperliche Behinderungen im Berufs- und Bildungsalltag";
+    });
+  }
+
+
+  /* ANFRAGEFORMULAR */
+
+  const seminarRequestForm =
+    document.getElementById("seminarRequestForm");
+
+  const formStatus =
+    document.getElementById("formStatus");
+
+  seminarRequestForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton =
+      seminarRequestForm.querySelector('button[type="submit"]');
+
+    const originalText = submitButton.textContent;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Wird gesendet …";
+    formStatus.textContent = "";
+
+    try {
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
           method: "POST",
           body: new FormData(seminarRequestForm)
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-          formStatus.textContent = "Vielen Dank! Ihre Anfrage wurde erfolgreich versendet.";
-          seminarRequestForm.reset();
-        } else {
-          formStatus.textContent = "Das hat leider nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie mir eine E-Mail.";
         }
-      } catch (error) {
-        formStatus.textContent = "Das hat leider nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie mir eine E-Mail.";
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = originalText;
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        formStatus.textContent =
+          "Vielen Dank! Ihre Anfrage wurde erfolgreich versendet.";
+
+        seminarRequestForm.reset();
+      } else {
+        formStatus.textContent =
+          "Das hat leider nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie mir eine E-Mail.";
       }
-    });
-  </script>
+    } catch (error) {
+      formStatus.textContent =
+        "Das hat leider nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie mir eine E-Mail.";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }
+  });
+</script>
 
 
-  <script>
-    (() => {
-      const button = document.getElementById("readAloudButton");
-      if (!button || !("speechSynthesis" in window)) {
-        if (button) button.hidden = true;
+<script>
+  /* VORLESEFUNKTION */
+
+  (() => {
+    const button =
+      document.getElementById("readAloudButton");
+
+    if (!button || !("speechSynthesis" in window)) {
+      if (button) button.hidden = true;
+      return;
+    }
+
+    let utterance = null;
+    let isReading = false;
+
+    const setButtonState = (reading) => {
+      isReading = reading;
+      button.textContent = reading ? "■" : "🔊";
+
+      button.setAttribute(
+        "aria-label",
+        reading ? "Vorlesen stoppen" : "Seite vorlesen"
+      );
+
+      button.setAttribute(
+        "title",
+        reading ? "Vorlesen stoppen" : "Seite vorlesen"
+      );
+    };
+
+    const getReadableText = () => {
+      const source =
+        document.querySelector("main") || document.body;
+
+      const clone = source.cloneNode(true);
+
+      clone.querySelectorAll(
+        "script, style, nav, footer, form, button, .read-aloud, .back-to-top, [aria-hidden='true']"
+      ).forEach(el => el.remove());
+
+      return clone.innerText.replace(/\s+/g, " ").trim();
+    };
+
+    button.addEventListener("click", () => {
+      if (isReading) {
+        window.speechSynthesis.cancel();
+        setButtonState(false);
         return;
       }
 
-      let utterance = null;
-      let isReading = false;
+      const textToRead = getReadableText();
 
-      const setButtonState = (reading) => {
-        isReading = reading;
-        button.textContent = reading ? "■" : "🔊";
-        button.setAttribute("aria-label", reading ? "Vorlesen stoppen" : "Seite vorlesen");
-        button.setAttribute("title", reading ? "Vorlesen stoppen" : "Seite vorlesen");
-      };
+      if (!textToRead) return;
 
-      const getReadableText = () => {
-        const source = document.querySelector("main") || document.body;
-        const clone = source.cloneNode(true);
+      window.speechSynthesis.cancel();
 
-        clone.querySelectorAll(
-          "script, style, nav, footer, form, button, .read-aloud, .back-to-top, [aria-hidden='true']"
-        ).forEach(el => el.remove());
+      utterance =
+        new SpeechSynthesisUtterance(textToRead);
 
-        return clone.innerText.replace(/\s+/g, " ").trim();
-      };
+      utterance.lang = "de-DE";
+      utterance.rate = 1;
 
-      button.addEventListener("click", () => {
-        if (isReading) {
-          window.speechSynthesis.cancel();
-          setButtonState(false);
-          return;
-        }
+      utterance.onend = () =>
+        setButtonState(false);
 
-        const textToRead = getReadableText();
-        if (!textToRead) return;
+      utterance.onerror = () =>
+        setButtonState(false);
 
-        window.speechSynthesis.cancel();
-        utterance = new SpeechSynthesisUtterance(textToRead);
-        utterance.lang = "de-DE";
-        utterance.rate = 1;
+      setButtonState(true);
 
-        utterance.onend = () => setButtonState(false);
-        utterance.onerror = () => setButtonState(false);
+      window.speechSynthesis.speak(utterance);
+    });
 
-        setButtonState(true);
-        window.speechSynthesis.speak(utterance);
-      });
-
-      window.addEventListener("beforeunload", () => {
-        window.speechSynthesis.cancel();
-      });
-    })();
-  </script>
+    window.addEventListener("beforeunload", () => {
+      window.speechSynthesis.cancel();
+    });
+  })();
+</script>
 
 </body>
 </html>
