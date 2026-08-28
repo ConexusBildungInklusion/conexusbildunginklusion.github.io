@@ -1486,6 +1486,45 @@
       border-radius: 30px 30px 30px 10px;
     }
 
+  
+    /* Über mich: ruhige Zwei-Bild-Komposition */
+    #ueber-mich .about-photo-composition {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(120px, 0.42fr);
+      gap: 16px;
+      align-items: end;
+    }
+
+    #ueber-mich .about-photo-wide {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+    }
+
+    #ueber-mich .about-photo-portrait {
+      width: 100%;
+      max-width: 190px;
+      justify-self: end;
+      aspect-ratio: 4 / 5;
+    }
+
+    #ueber-mich .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 720px) {
+      #ueber-mich .about-photo-composition {
+        grid-template-columns: minmax(0, 1fr) minmax(95px, 0.38fr);
+        gap: 10px;
+      }
+
+      #ueber-mich .about-photo-portrait {
+        max-width: 135px;
+      }
+    }
+
   </style>
 </head>
 
@@ -1593,18 +1632,21 @@
           Menschen.
         </p>
 
-        <a href="#kontakt" class="button button-red">
-          Kontakt aufnehmen
-        </a>
       </div>
 
-      <div class="about-photo-composition about-photo-single" aria-label="Persönliche Einblicke von Niklas Gorczynski">
+      <div class="about-photo-composition" aria-label="Persönliche Einblicke von Niklas Gorczynski">
         <figure class="about-photo about-photo-wide">
           <img
             src="Para-Eishockey-Bild.jpeg"
             alt="Niklas Gorczynski beim Para-Eishockey auf dem Eis"
           >
         </figure>
+
+            <figure class="about-photo about-photo-portrait">
+              <img src="Rollstuhl-Bild.jpeg"
+                   alt="Niklas Gorczynski im Rollstuhl"
+                   loading="lazy">
+            </figure>
       </div>
 
     </div>
@@ -1620,6 +1662,12 @@
         <li>Praxis in Erwachsenenbildung, Sozial- und Gesundheitswesen</li>
       </ul>
     </aside>
+
+    <div style="margin-top: 28px;">
+      <a href="#kontakt" class="button button-red">
+        Kontakt aufnehmen
+      </a>
+    </div>
 
   </div>
 </section>
