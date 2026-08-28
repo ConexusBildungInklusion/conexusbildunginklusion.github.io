@@ -649,6 +649,63 @@
       font-size: 1.06rem;
     }
 
+
+    .about-feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-photo-composition {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 18px;
+      align-items: end;
+      position: relative;
+    }
+
+    .about-photo {
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 18px 45px rgba(37,85,78,0.12);
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-photo-wide {
+      aspect-ratio: 1.28 / 1;
+      border-radius: 30px 30px 30px 10px;
+    }
+
+    .about-photo-wide img {
+      object-position: center;
+    }
+
+    .about-photo-portrait {
+      aspect-ratio: 0.78 / 1;
+      border-radius: 30px 30px 10px 30px;
+      transform: translateY(28px);
+    }
+
+    .about-photo-portrait img {
+      object-position: center 38%;
+    }
+
+    .about-qualification-card {
+      margin-top: 58px;
+    }
+
+    .about-qualification-card ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 42px;
+    }
+
     .qualification-card {
       background: var(--green);
       color: white;
@@ -1289,6 +1346,36 @@
         grid-template-columns: 1fr;
       }
 
+
+      .about-feature-grid,
+      .about-photo-composition,
+      .about-qualification-card ul {
+        grid-template-columns: 1fr;
+      }
+
+      .about-feature-grid {
+        gap: 38px;
+      }
+
+      .about-photo-composition {
+        gap: 14px;
+      }
+
+      .about-photo-wide,
+      .about-photo-portrait {
+        aspect-ratio: 16 / 10;
+        border-radius: 24px;
+        transform: none;
+      }
+
+      .about-photo-portrait img {
+        object-position: center 32%;
+      }
+
+      .about-qualification-card {
+        margin-top: 36px;
+      }
+
       .request-form {
         padding: 30px 22px;
       }
@@ -1411,9 +1498,9 @@
 
       <ul class="nav-links">
         <li><a href="#start">Start</a></li>
+        <li><a href="#ueber-mich">Über mich</a></li>
         <li><a href="#seminare">Seminare</a></li>
         <li><a href="#seminar-einblick">Seminar-Einblick</a></li>
-        <li><a href="#ueber-mich">Über mich</a></li>
         <li><a href="#individuell">Individuelle Angebote</a></li>
         <li><a href="#downloads">Downloads</a></li>
         <li><a href="#arbeitgeberbefragung">Arbeitgeberbefragung</a></li>
@@ -1458,6 +1545,81 @@
     </div>
   </div>
 </header>
+
+<section class="about-section" id="ueber-mich">
+  <div class="container">
+
+    <div class="about-feature-grid">
+
+      <div class="about-copy">
+        <div class="section-kicker">Über mich</div>
+
+        <h2 class="section-title">
+          Fachwissen trifft gelebte Perspektive.
+        </h2>
+
+        <p>
+          Ich bin Niklas Gorczynski, Fachdozent, Bildungsreferent und
+          AEVO-Ausbilder.
+        </p>
+
+        <p>
+          In meiner Bildungsarbeit verbinde ich fundiertes Fachwissen mit
+          beruflicher Praxis aus Pädagogik, Erwachsenenbildung sowie dem
+          Gesundheits- und Sozialwesen.
+        </p>
+
+        <p>
+          Inklusion und Teilhabe sind für mich dabei nicht nur fachliche Themen.
+          Als Mensch mit Behinderung kenne ich Barrieren, Selbstbestimmung und
+          die Bedeutung echter Teilhabe auch aus eigener Perspektive.
+        </p>
+
+        <p>
+          Diese Erfahrungen ergänzen meine fachliche Arbeit und prägen meinen
+          Anspruch an Bildung: praxisnah, reflektiert, auf Augenhöhe und mit
+          einem klaren Blick auf die unterschiedlichen Lebensrealitäten von
+          Menschen.
+        </p>
+
+        <a href="#kontakt" class="button button-red">
+          Kontakt aufnehmen
+        </a>
+      </div>
+
+      <div class="about-photo-composition" aria-label="Persönliche Einblicke von Niklas Gorczynski">
+        <figure class="about-photo about-photo-wide">
+          <img
+            src="niklas-para-eishockey.jpeg"
+            alt="Niklas Gorczynski beim Para-Eishockey auf dem Eis"
+          >
+        </figure>
+
+        <figure class="about-photo about-photo-portrait">
+          <img
+            src="niklas-rollstuhl.jpeg"
+            alt="Niklas Gorczynski im Rollstuhl im Freien"
+          >
+        </figure>
+      </div>
+
+    </div>
+
+    <aside class="qualification-card about-qualification-card">
+      <h3>Qualifikationen</h3>
+
+      <ul>
+        <li>Fachwirt im Gesundheits- und Sozialwesen (IHK)</li>
+        <li>Bachelor Professional in Health and Social Services</li>
+        <li>Staatlich anerkannter Erzieher</li>
+        <li>Ausbildereignung nach AEVO</li>
+        <li>Praxis in Erwachsenenbildung, Sozial- und Gesundheitswesen</li>
+      </ul>
+    </aside>
+
+  </div>
+</section>
+
 
 
 <section class="seminar-section" id="seminare">
@@ -1711,58 +1873,6 @@
 </section>
 
 
-<section class="about-section" id="ueber-mich">
-  <div class="container about-grid">
-
-    <div class="about-copy">
-      <div class="section-kicker">Über mich</div>
-
-      <h2 class="section-title">
-        Fachwissen trifft Praxis.
-      </h2>
-
-      <p>
-        Ich bin Niklas Gorczynski, Fachdozent, Bildungsreferent und
-        AEVO-Ausbilder.
-      </p>
-
-      <p>
-        Als Fachdozent und Bildungsreferent vermittle ich praxisnahes
-        Fachwissen in den Bereichen Gesundheits- und Sozialwesen,
-        Pädagogik, Erwachsenenbildung sowie Inklusion.
-      </p>
-
-      <p>
-        Durch meine Erfahrungen in Lehre, Sozialberatung und dem
-        Gesundheitswesen verbinde ich fundierte Fachkenntnisse mit
-        praxisorientierten Methoden.
-      </p>
-
-      <p>
-        Persönliche Erfahrungen mit Behinderung und Teilhabe ergänzen
-        meine fachliche Perspektive und prägen mein Verständnis von
-        inklusiver Bildung.
-      </p>
-
-      <a href="#kontakt" class="button button-red">
-        Kontakt aufnehmen
-      </a>
-    </div>
-
-    <aside class="qualification-card">
-      <h3>Qualifikationen</h3>
-
-      <ul>
-        <li>Fachwirt im Gesundheits- und Sozialwesen (IHK)</li>
-        <li>Bachelor Professional in Health and Social Services</li>
-        <li>Staatlich anerkannter Erzieher</li>
-        <li>Ausbildereignung nach AEVO</li>
-        <li>Praxis in Erwachsenenbildung, Sozial- und Gesundheitswesen</li>
-      </ul>
-    </aside>
-
-  </div>
-</section>
 
 
 <section class="why-section">
